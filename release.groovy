@@ -13,7 +13,7 @@ def tagDownstreamRepos() {
 
     }
 
-    git 'https://github.com/fabric8io/fabric8-jenkinsfile-library.git'
+    git 'https://github.com/lordofthejars/fabric8-jenkinsfile-library.git'
     setWorkspace('fabric8io/fabric8-jenkinsfile-library')
 
     container(name: 'clients') {
