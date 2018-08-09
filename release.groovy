@@ -25,6 +25,8 @@ def tagDownstreamRepos() {
 
         sh "git commit -a -m 'Updated Jenkinsfiles with new library version ${newVersion}'"
 
+        sh "cat maven/Release/Jenkinsfile"
+
         println "Pushing Jenkinsfile library ${newVersion}"
         // flow.pushTag(newVersion)
     }
