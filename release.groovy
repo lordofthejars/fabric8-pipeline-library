@@ -8,8 +8,8 @@ def tagDownstreamRepos() {
     setWorkspace('fabric8io/fabric8-pipeline-library')
     newVersion = getJenkinsVersion()
     container(name: 'clients') {
-
-        flow.pushTag(newVersion)
+        println "Pushing Pipeline library ${newVersion}"
+        //flow.pushTag(newVersion)
 
     }
 
@@ -25,7 +25,8 @@ def tagDownstreamRepos() {
 
         sh "git commit -a -m 'Updated Jenkinsfiles with new library version ${newVersion}'"
 
-        flow.pushTag(newVersion)
+        println "Pushing Jenkinsfile library ${newVersion}"
+        // flow.pushTag(newVersion)
     }
 
 }
